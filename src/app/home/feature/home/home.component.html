@@ -1,0 +1,13 @@
+@if (vm(); as vm) {
+  <div class="h-full flex flex-col justify-center items-center gap-4">
+    <h1 class="text-4xl text-center">Proyecto plantilla</h1>
+
+    <p class="text-md text-center">Desarrollado con</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      @for (logo of vm.logos; track logo.name) {
+        <app-tech-logo [logo]="logo" />
+      }
+    </div>
+  </div>
+}
